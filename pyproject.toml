@@ -1,0 +1,7 @@
+
+# Ruff settings
+[tool.ruff]
+line-length = 200
+
+[tool.ruff.format]
+docstring-code-format = true

@@ -1,0 +1,61 @@
+
+0x00 HEADER       0x02 INTEGER_2  Start of stream, contains version number of
+0x01 BGNLIB       0x02 INTEGER_2  Beginning of library, plus mod and access
+0x02 LIBNAME      0x06 STRING     The name of the library, supposedly following
+0x03 UNITS        0x05 REAL_8     Size of db unit in user units, size of db
+0x04 ENDLIB       0x00 NO_DATA    End of the library.
+0x05 BGNSTR       0x02 INTEGER_2  Begin structure, plus create and mod dates in
+0x06 STRNAME      0x06 STRING     Name of a structure. Up to 32 characters in
+0x07 ENDSTR       0x00 NO_DATA    End of a structure.
+0x08 BOUNDARY     0x00 NO_DATA    The beginning of a BOUNDARY element.
+0x09 PATH         0x00 NO_DATA    The beginning of a PATH element.
+0x0a SREF         0x00 NO_DATA    The beginning of an SREF element.
+0x0b AREF         0x00 NO_DATA    The beginning of an AREF element.
+0x0c TEXT         0x00 NO_DATA    The beginning of a TEXT element.
+0x0d LAYER        0x02 INTEGER_2  Layer specification. On GDSII this could be
+0x0e DATATYPE     0x02 INTEGER_2  Datatype specification. On GDSII this could
+0x0f WIDTH        0x03 INTEGER_4  Width specification, negative means absolute
+0x10 XY           0x03 INTEGER_4  An array of XY coordinates. An array of
+0x11 ENDEL        0x00 NO_DATA    The end of an element.
+0x12 SNAME        0x06 STRING     The name of a referenced structure.
+0x13 COLROW       0x02 INTEGER_2  Columns and rows for an AREF. Two 2 byte
+0x14 TEXTNODE     0x00 NO_DATA    "Not currently used" per GDSII Stream Format
+0x15 NODE         0x00 NO_DATA    The beginning of a NODE element.
+0x16 TEXTTYPE     0x02 INTEGER_2  Texttype specification. On GDSII this could
+0x17 PRESENTATION 0x01 BIT_ARRAY  Text origin and font specification.
+0x18 SPACING           UNKNOWN    "Discontinued" per GDSII Stream Format
+0x19 STRING       0x06 STRING     Character string. Up to 512 char in GDSII
+0x1a STRANS       0x01 BIT_ARRAY  Bits 15 to 0, l to r
+0x1b MAG          0x05 REAL_8     Magnification, 1 is the default if omitted.
+0x1c ANGLE        0x05 REAL_8     Angular rotation factor in ccw direction.
+0x1d UINTEGER          UNKNOWN    User integer, used only in V2.0, when
+0x1e USTRING           UNKNOWN    User string, used only in V2.0, when
+0x1f REFLIBS      0x06 STRING     Names of the reference libraries. Starts with
+0x20 FONTS        0x06 STRING     Names of the textfont definition files. 4 44
+0x21 PATHTYPE     0x02 INTEGER_2  Type of path ends.
+0x22 GENERATIONS  0x02 INTEGER_2  Number of deleted or backed up structures to
+0x23 ATTRTABLE    0x06 STRING     Name of the attribute definition file. Max
+0x24 STYPTABLE    0x06 STRING     "Unreleased feature" per GDSII Stream Format
+0x25 STRTYPE      0x02 INTEGER_2  "Unreleased feature" per GDSII Stream Format
+0x26 ELFLAGS      0x01 BIT_ARRAY  Flags for template and exterior data.
+0x27 ELKEY        0x03 INTEGER_4  "Unreleased feature" per GDSII Stream Format
+0x28 LINKTYPE          UNKNOWN    "Unreleased feature" per GDSII Stream Format
+0x29 LINKKEYS          UNKNOWN    "Unreleased feature" per GDSII Stream Format
+0x2a NODETYPE     0x02 INTEGER_2  Nodetype specification. On GDSII this could
+0x2b PROPATTR     0x02 INTEGER_2  Property number.
+0x2c PROPVALUE    0x06 STRING     Property value. On GDSII, 128 characters max,
+0x2d BOX          0x00 NO_DATA    The beginning of a BOX element.
+0x2e BOXTYPE      0x02 INTEGER_2  Boxtype specification. On GDSII this could be
+0x2f PLEX         0x03 INTEGER_4  Plex number and plexhead flag. The least
+0x30 BGNEXTN      0x03 INTEGER_4  Path extension beginning for pathtype 4 in
+0x31 ENDTEXTN     0x03 INTEGER_4  Path extension end for pathtype 4 in
+0x32 TAPENUM      0x02 INTEGER_2  Tape number for multi-reel stream file.
+0x33 TAPECODE     0x02 INTEGER_2  Tape code to verify that the reel is from the
+0x34 STRCLASS     0x01 BIT_ARRAY  Calma use only. In stream files created by
+0x35 RESERVED     0x03 INTEGER_4  Used to be NUMTYPES per GDSII Stream Format
+0x36 FORMAT       0x02 INTEGER_2  Archive or Filtered flag.
+0x37 MASK         0x06 STRING     Only in filtered streams. Layers and
+0x38 ENDMASKS     0x00 NO_DATA    The end of mask descriptions.
+0x39 LIBDIRSIZE   0x02 INTEGER_2  Number of pages in library director, a GDSII
+0x3a SRFNAME      0x06 STRING     Sticks rule file name.
+0x3b LIBSECUR     0x02 INTEGER_2  Access control list stuff for CalmaDOS,
